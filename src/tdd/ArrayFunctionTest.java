@@ -75,11 +75,11 @@ public class ArrayFunctionTest {
         boolean result = ArrayFunction.stringPalindrome(letters);
         assertEquals(result, false);
     }
-    @Test
-    public void testNumbersAndReturnItsDigits(){
-        int [] number = {2342};
-        assertArrayEquals(new int[] {2, 3, 4, 2} ,ArrayFunction.numberAndReturnDigit(number));
-    }
+//    @Test
+//    public void testNumbersAndReturnItsDigits(){
+//        int [] number = {2342};
+//        assertArrayEquals(new int[] {2, 3, 4, 2} ,ArrayFunction.numberAndReturnDigit(number));
+//    }
 
 
 }

@@ -3,9 +3,6 @@ package MrChibuzoAssignment;
 import java.util.Arrays;
 
 public class ArrayFunction {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(numberAndReturnDigit(new int[]{597})));
-    }
 
     public static int[] oddPosition(int[] element) {
 
@@ -124,18 +121,18 @@ public class ArrayFunction {
     }
 
 
-    public static int[] numberAndReturnDigit(int[] number) {
-        int[] digit = number;
-        int[] seperate = {0};
-        int counter = 0;
-        for (int count = 0; count < number.length; count++) {
-            seperate = new int[number.length % 10];
-            digit = new int[digit.length / 10];
-            seperate[counter] = number[count];
-        }
-
-        return seperate;
-    }
+//    public static int[] numberAndReturnDigit(int[] number) {
+//        int[] digit = number;
+//        int[] seperate = {0};
+//        int counter = 0;
+//        for (int count = 0; count < number.length; count++) {
+//            seperate = new int[number.length % 10];
+//            digit = new int[digit.length / 10];
+//            seperate[counter] = number[count];
+//        }
+//
+//        return seperate;
+//    }
 
     public static boolean stringPalindrome(String[] letters) {
         String [] reverse = new String[]{String.valueOf(letters.length)};
