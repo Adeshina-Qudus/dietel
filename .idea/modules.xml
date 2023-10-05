@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/holy_child.iml" filepath="$PROJECT_DIR$/holy_child.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/javaAssignment.iml" filepath="$PROJECT_DIR$/javaAssignment.iml" />
+>>>>>>> 850721610b68af066f3d79673a04142b5956de3d
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package chapter4;
+package FMassignment;
 
 import java.util.Scanner;
 

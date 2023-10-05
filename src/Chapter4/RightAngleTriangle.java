@@ -1,18 +1,19 @@
-package Chapter4;
+package chapter4;
 
 import java.util.Scanner;
 
 public class RightAngleTriangle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("enter the length of the base of a triangle from 1 - 10");
+        System.out.println("ENTER THE BASE OF TRIANGLE BETWEEN 1 AND TEN");
         int userInput = input.nextInt();
 
-        for (int count = 1; count <= userInput; count++){
-            for (int j = 1;  j <= count ; j++){
-                System.out.print("*");
+        for (int i = 1; i <= userInput; i++) {
+            for (int j = 1; j <= i ; j++) {
+                System.out.print("* ");
             }
-            System.out.println();
+            System.out.println(" ");
+
         }
     }
 }

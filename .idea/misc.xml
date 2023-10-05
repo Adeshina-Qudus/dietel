@@ -1,7 +1,10 @@
 <project version="4">
+<<<<<<< HEAD
   <component name="PWA">
     <option name="wasEnabledAtLeastOnce" value="true" />
   </component>
+=======
+>>>>>>> 850721610b68af066f3d79673a04142b5956de3d
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
