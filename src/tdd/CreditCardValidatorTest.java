@@ -1,13 +1,8 @@
 package tdd;
 
-import MrChibuzoAssignment.CreditCardValidator;
 import MrChibuzoAssignment.CreditCardValidatorServer;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class CreditCardValidatorTest {
 
@@ -64,6 +59,7 @@ public class CreditCardValidatorTest {
         String digit = "4388576018402626";
         Assertions.assertEquals(75, CreditCardValidatorServer.sumOddAndEven(digit));
    }
+
 
 
 }

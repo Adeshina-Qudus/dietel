@@ -11,7 +11,7 @@ public class CreditCardValidator {
                 AMERICAN EXPRESS CARDS MUST START WITH [37]
                 DISCOVER CARDS MUST START WITH [6]
                 
-                HELLO, KINDLY ENTER YOUR CARD DETAILS TO VERIFY  
+                HELLO, KINDLY ENTER YOUR CARD DETAILS TO VERIFY \s
                                           \s
                 """);
         Scanner input = new Scanner(System.in);
@@ -28,6 +28,7 @@ public class CreditCardValidator {
                    System.out.println("*************************************************************");
                    System.out.print("**CREDIT CARD TYPE : ");
                    CreditCardValidatorServer.cards(creditCardNumbers);
+                   System.out.println();
                    System.out.println("**CREDIT CARD NUMBER : " + creditCardNumbers);
                    System.out.println("**CREDIT CARD DIGIT LENGTH : " + creditCardNumbers.length());
                    System.out.print("**CREDIT CARD VALIDITY STATUS : ");
@@ -36,6 +37,7 @@ public class CreditCardValidator {
                }
            }
     }
+
 
 
 
