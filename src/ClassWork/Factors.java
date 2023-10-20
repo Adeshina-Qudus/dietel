@@ -1,4 +1,4 @@
-package classwork;
+package ClassWork;
 import java.util.Scanner;
 public class Factors {
     public static void main(String[] args) {
