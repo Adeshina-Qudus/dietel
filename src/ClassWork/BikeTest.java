@@ -1,9 +1,9 @@
-package classwork;
+package ClassWork;
 
 public class BikeTest {
     public static void main(String[] args){
 
-        Bike bike = new Bike();
+        classwork.Bike bike = new classwork.Bike();
 
             bike.setName ("benz");
             bike.setOn (true);

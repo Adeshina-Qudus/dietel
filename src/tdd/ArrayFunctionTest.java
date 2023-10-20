@@ -71,7 +71,7 @@ public class ArrayFunctionTest {
 
     @Test
     public void testWeatherAStringIsAPalindrome(){
-        String [] letters = {"left"};
+        String [] letters = {"mallam"};
         boolean result = ArrayFunction.stringPalindrome(letters);
         assertEquals(result, false);
     }

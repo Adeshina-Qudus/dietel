@@ -62,7 +62,6 @@ public class Nokia {
             case 13:
                 SIM_services();
 
-
         }
     }
     public static void phoneBook(){
@@ -78,6 +77,7 @@ public class Nokia {
                 8. Options
                 9. Speed dials
                 10.Voice tags
+                11.Go back
                 """);
         int useInputp = input.nextInt();
         switch (useInputp){
@@ -132,6 +132,8 @@ public class Nokia {
             case 10:
                 System.out.println("Voice tags");
                 break;
+            case 11:
+                mainMenu();
 
         }
 
@@ -149,7 +151,8 @@ public class Nokia {
                 7. Message settings
                 8. info service
                 9. Voice mailbox number
-                10.Services command editor""");
+                10.Services command editor
+                11.Go back""");
         int userinputm = input.nextInt();
         switch (userinputm) {
             case 1:
@@ -234,6 +237,9 @@ public class Nokia {
                     case 10:
                         System.out.println("Service command editor");
                         break;
+                    case 11:
+                        mainMenu();
+
 
 
                 }
@@ -243,19 +249,21 @@ public class Nokia {
            Scanner input = new Scanner(System.in);
             System.out.println("""
                     1. Chat
-                    2. go back""");
+                    2. go back
+                    3. Main menu""");
             int userInput = input.nextInt();
 
             switch (userInput) {
                 case 1 -> System.out.println("Chat");
                 case 2 -> chat();
+                case 3 -> mainMenu();
             }
 
         }
         public static void callRegister(){
         Scanner input = new Scanner(System.in);
             System.out.println("""
-                    1. Missed calls      
+                    1. Missed calls     
                     2. Received calls
                     3. Dialled number 
                     4. Erase recent call list                
@@ -263,6 +271,7 @@ public class Nokia {
                     6. Show call costs
                     7. Call cost settings 
                     8. Prepaid credit
+                    9. Go Back
                     """);
             int userInput = input.nextInt();
             switch (userInput) {
@@ -325,6 +334,7 @@ public class Nokia {
                     }
                 }
                 case 8 -> System.out.println("Prepaid credit");
+                case 9 -> mainMenu();
             }
     }
             public static void tones(){
@@ -362,7 +372,7 @@ public class Nokia {
                         2. Phone settings
                         3. Security settings
                         4. Restore factory settings
-                                         
+                        5. Go back                 
                         """);
                 int userInput = input.nextInt();
                 switch (userInput) {
@@ -432,17 +442,22 @@ public class Nokia {
                     case 4:
                         System.out.println("Restore factory settings");
                         break;
+                    case 5:
+                        mainMenu();
                 }
             }
             public static void callDivert(){
         Scanner input = new Scanner(System.in);
                 System.out.println("""
                 1.Call divert
-                2. Go back""");
+                2. Go back
+                3.Main menu
+                """);
                 int userInputC = input.nextInt();
                 switch (userInputC) {
                     case 1 -> System.out.println("call divert");
                     case 2 -> callDivert();
+                    case 3-> mainMenu();
                 }
             }
 
@@ -506,18 +521,31 @@ public class Nokia {
             }
             public static void Profiles(){
         Scanner input = new Scanner(System.in);
-                System.out.println("Profiles");
+                System.out.println("""
+                1.Profiles
+                2.Go back
+                3.Main menu
+                """);
                 int userInput = input.nextInt();
                 switch (userInput) {
                     case 1 -> System.out.println("Profiles");
+                    case 2 -> Profiles();
+                    case 3 -> mainMenu();
+
                 }
             }
             public static void SIM_services(){
         Scanner input = new Scanner(System.in);
-                System.out.println("SIM services");
+                System.out.println("""
+                1.SIM services
+                2.Go Back
+                3.Main menu
+                """);
                 int userInput = input.nextInt();
                 switch (userInput) {
                     case 1 -> System.out.println("SIM services");
+                    case 2 -> SIM_services();
+                    case 3 -> mainMenu();
                 }
             }
 
