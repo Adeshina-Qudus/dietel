@@ -1,11 +1,6 @@
 package GreeksForGreeks.levelOne;
-import static GreeksForGreeks.levelOne.SortArray.*;
-public class CountNumberOfOccurrences {
 
-    public static void main(String[] args) {
-        occurrences(new int[]{1, 1, 2, 2, 2, 2, 3,},2);
-
-    }
+public class CountNumberOfOccurrencesFunction {
 
     public static void occurrences(int [] numbers, int occurrencesNumber){
 

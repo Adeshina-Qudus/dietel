@@ -7,7 +7,11 @@ import java.util.Arrays;
 public class HCF {
 
     public static void main(String[] args) {
+
         System.out.println(hcf(6,12,18 ));
+
+        System.out.println(hcf(50,70,90,23));
+
     }
 
     public static int hcf(int ... numbers) {

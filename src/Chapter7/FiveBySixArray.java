@@ -13,5 +13,6 @@ public class FiveBySixArray {
             }
             System.out.println(Arrays.deepToString(array));
         }
+        System.out.println();
     }
 }

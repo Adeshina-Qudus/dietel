@@ -1,11 +1,6 @@
 package GreeksForGreeks.levelOne;
 
-import java.util.Arrays;
-
-public class KthSmallestElement {
-    public static void main(String[] args) {
-        System.out.println(indexOfSmallest(new int[]{7, 10, 4, 3, 20, 15}));
-    }
+public class KthSmallestElementFunction {
     public static int [] sortArray(int [] inputArray) {
         for (int outer = 0; outer < inputArray.length; outer++) {
             for (int inner = 0; inner < inputArray.length; inner++) {
