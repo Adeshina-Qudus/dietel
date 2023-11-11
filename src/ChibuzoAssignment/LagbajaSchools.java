@@ -9,9 +9,11 @@ import java.util.Scanner;
 public class LagbajaSchools {
     public static void main(String[] args) {
 
-        student();
-        scoreTable();
-       // System.out.println(Arrays.toString(sort(new int[]{2, 1, 4, 3})));
+//        student();
+//       scoreTable();
+        System.out.println(Arrays.toString(averagePos(new double[]{45.67, 72.00, 51.33, 75.67})));
+        //System.out.println(Arrays.toString(sort(new int[]{2, 1, 4, 3})));
+       // System.out.println(returnInt(new int[]{2}));
     }
 
     static int numberOfStudent;
@@ -56,37 +58,66 @@ public class LagbajaSchools {
         System.out.println("STUDENT     "+ empty +  "TOT    AVE      POS" );
         System.out.println("========================================================");
         int counter = 0 ;
-        int  total = 0; ;
         double average = 0 ;
+        int change = 0 ;
+        int averageCounter = 0 ;
 
+        int[] total = total(scoreTable);
+        double [] averagePos = new double[numberOfStudent];
         for (int[] row : scoreTable) {
             System.out.print("STUDENT "+(counter + 1)+"\t");
             for (int column : row) {
-                System.out.print(column+"\t\t");
-                total += column;
+                System.out.print(column + "\t\t");
             }
-            average = (double) total / numberOfStudent;
-            System.out.print(total+"\t\t");
-            System.out.print(average+"\t\t");
-            total = 0;
+            average = (double) total[change] / numberOfSubject;
+            averagePos[change] = average;
+            if (averagePos[change] < average){
+                averageCounter ++;
+            }
+            System.out.print((returnInt(new int[]{total[change]})) + "\t\t");
+            System.out.printf("%.2f",average);
+
+            //System.out.print(Arrays.toString(sort(averagePos)));
+            System.out.println(averageCounter);
             counter++;
+            change++;
+            System.out.println();
         }
-        System.out.println();
    }
 
    public static int[] sort(int [] array) {
+        int counter = 0;
        for (int outer = 0; outer < array.length; outer++) {
            for (int inner = 0; inner < array.length; inner++) {
                if (array[outer] > array[inner]) {
+                   counter++;
                    int temp = array[inner];
                    array[inner] = array[outer];
-                   array[outer] = temp;
+                   array[outer] = counter;
                }
            }
        }
        return array;
    }
+   public static int[] averagePos(double [] array){
+        double smallest = array[0];
+        int counter = 1;
+        int [] newArray = new int[array.length];
+        for (int outter = 0 ; outter < array.length ; outter++){
+            for (int inner = 0; inner < array.length; inner++) {
+                if (array[outter] <= array[inner]) {
+                    counter++;
+                    newArray[inner] = counter;
+                }
+                if (array[outter] >= array[inner]){
+                    counter--;
+                    newArray[inner] = counter;
 
+                }
+            }
+        }
+        return newArray;
+   }
    public static int[] total(int [][] scoreTable){
 
         int []total = new int[numberOfStudent];
@@ -98,6 +129,15 @@ public class LagbajaSchools {
            change++;
            }
        return total;
+   }
+
+
+   public static int returnInt(int [] array){
+        StringBuilder string = new StringBuilder();
+       for (int i : array) {
+           string.append(i);
+       }
+        return Integer.parseInt(string.toString());
    }
 
 
