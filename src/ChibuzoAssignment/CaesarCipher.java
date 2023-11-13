@@ -13,6 +13,7 @@ public class CaesarCipher {
         StringBuilder encryptLetters = new StringBuilder();
             for (int count = 0; count < charArray.length; count++) {
                 char letters = word.charAt(count);
+
                 charArray[count] =  String.valueOf(letters + shiftKey);
                 if (letters > 26) {
                     charArray[count] = String.valueOf(letters + shiftKey % 26);

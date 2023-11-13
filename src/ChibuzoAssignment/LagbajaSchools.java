@@ -9,11 +9,9 @@ import java.util.Scanner;
 public class LagbajaSchools {
     public static void main(String[] args) {
 
-//        student();
-//       scoreTable();
-        System.out.println(Arrays.toString(averagePos(new double[]{45.67, 72.00, 51.33, 75.67})));
-        //System.out.println(Arrays.toString(sort(new int[]{2, 1, 4, 3})));
-       // System.out.println(returnInt(new int[]{2}));
+      student();
+       scoreTable();
+    //System.out.println(Arrays.toString(lastDigit(new int[]{12, 21})));
     }
 
     static int numberOfStudent;
@@ -41,6 +39,13 @@ public class LagbajaSchools {
                                     Enter score for subject %d
                                     """, (row + 1),(column + 1));
                 scoreTable[row][column] = input.nextInt();
+                if(scoreTable[row][column] < 0){
+                    scoreTable[row][column] = 0;
+                }
+                while (scoreTable[row][column] > 100){
+                    System.out.println("ENTER A VALID SCORE FROM 0 TO 100 ");
+                    scoreTable[row][column] = input.nextInt();
+                }
                 System.out.println("""
                                     Saving >>>>>>>>>>>>>>>>>>>>>
                                     Saved Successfully
@@ -60,7 +65,6 @@ public class LagbajaSchools {
         int counter = 0 ;
         double average = 0 ;
         int change = 0 ;
-        int averageCounter = 0 ;
 
         int[] total = total(scoreTable);
         double [] averagePos = new double[numberOfStudent];
@@ -71,48 +75,21 @@ public class LagbajaSchools {
             }
             average = (double) total[change] / numberOfSubject;
             averagePos[change] = average;
-            if (averagePos[change] < average){
-                averageCounter ++;
-            }
             System.out.print((returnInt(new int[]{total[change]})) + "\t\t");
             System.out.printf("%.2f",average);
-
-            //System.out.print(Arrays.toString(sort(averagePos)));
-            System.out.println(averageCounter);
+            System.out.print("\t\t"+(returnInt(averagePos(averagePos))));
             counter++;
             change++;
             System.out.println();
         }
    }
-
-   public static int[] sort(int [] array) {
-        int counter = 0;
-       for (int outer = 0; outer < array.length; outer++) {
-           for (int inner = 0; inner < array.length; inner++) {
-               if (array[outer] > array[inner]) {
-                   counter++;
-                   int temp = array[inner];
-                   array[inner] = array[outer];
-                   array[outer] = counter;
-               }
-           }
-       }
-       return array;
-   }
    public static int[] averagePos(double [] array){
-        double smallest = array[0];
-        int counter = 1;
         int [] newArray = new int[array.length];
-        for (int outter = 0 ; outter < array.length ; outter++){
-            for (int inner = 0; inner < array.length; inner++) {
-                if (array[outter] <= array[inner]) {
-                    counter++;
-                    newArray[inner] = counter;
-                }
-                if (array[outter] >= array[inner]){
-                    counter--;
-                    newArray[inner] = counter;
-
+        Arrays.fill(newArray, 1);
+        for (int outter = 0; outter < array.length ; outter++){
+            for (double v : array) {
+                if (array[outter] < v) {
+                    newArray[outter] += 1;
                 }
             }
         }
@@ -139,6 +116,16 @@ public class LagbajaSchools {
        }
         return Integer.parseInt(string.toString());
    }
+
+//    public static  int [] lastDigit(int[]digits) {
+//        int [] newArray = new int[digits.length];
+//        int number = Integer.parseInt(String.valueOf("1" + "0".repeat(digits.length - 1)));
+//        for (int counter = 0 ; counter < digits.length; counter++){
+//           newArray[counter] = digits[counter] % number;
+//        }
+//
+//        return newArray;
+//    }
 
 
 }
