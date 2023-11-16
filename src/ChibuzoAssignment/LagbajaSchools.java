@@ -30,7 +30,6 @@ public class LagbajaSchools {
     }
 
     public static void subjectStudentSaving(){
-
         Scanner input = new Scanner(System.in);
         for (int row = 0 ; row < scoreTable.length ; row++){
             for (int column = 0 ; column < scoreTable[row].length ; column++){
@@ -68,22 +67,22 @@ public class LagbajaSchools {
 
         int[] total = total(scoreTable);
         double [] averagePos = new double[numberOfStudent];
-        for (int[] row : scoreTable) {
+        for (int row = 0 ; row < scoreTable.length ; row++) {
             System.out.print("STUDENT "+(counter + 1)+"\t");
-            for (int column : row) {
+            for (int column = 0; column < scoreTable[row].length; column++) {
                 System.out.print(column + "\t\t");
+                average = (double) total[change] / numberOfSubject;
+                averagePos[change] = average;
+                System.out.print((returnInt(new int[]{total[change]})) + "\t\t");
+                System.out.printf("%.2f", average);
+                System.out.print("\t\t" + (returnInt(averagePos(total))));
             }
-            average = (double) total[change] / numberOfSubject;
-            averagePos[change] = average;
-            System.out.print((returnInt(new int[]{total[change]})) + "\t\t");
-            System.out.printf("%.2f",average);
-            System.out.print("\t\t"+(returnInt(averagePos(averagePos))));
-            counter++;
-            change++;
+                counter++;
+                change++;
             System.out.println();
         }
    }
-   public static int[] averagePos(double [] array){
+   public static int[] averagePos(int [] array){
         int [] newArray = new int[array.length];
         Arrays.fill(newArray, 1);
         for (int outter = 0; outter < array.length ; outter++){
@@ -96,7 +95,6 @@ public class LagbajaSchools {
         return newArray;
    }
    public static int[] total(int [][] scoreTable){
-
         int []total = new int[numberOfStudent];
         int change = 0;
        for (int[] row : scoreTable) {

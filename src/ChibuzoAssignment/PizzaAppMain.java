@@ -2,7 +2,7 @@ package ChibuzoAssignment;
 
 import java.util.Scanner;
 
-public class PizzaAppMain {
+public class    PizzaAppMain {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
